@@ -27,7 +27,7 @@
     </div>
 </div>
 
-<div class="bg-[url('./matcha.jpg')] z-10 block md:before:bg-none md:before:opacity-100 relative overflow-hidden bg-cover bg-no-repeat bg-center md:bg-none before:content-['']
+<div class="bg-[url('/matcha.jpg')] z-10 block md:before:bg-none md:before:opacity-100 relative overflow-hidden bg-cover bg-no-repeat bg-center md:bg-none before:content-['']
             before:absolute
             before:inset-0
             before:block
