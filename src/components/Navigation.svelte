@@ -1,19 +1,35 @@
 <script>
     let isMenuOpen = false;
     import { page } from '$app/stores';
-    import { onDestroy } from 'svelte';
+    import { onDestroy, onMount } from 'svelte';
 	$: href = $page.url.pathname;
+    
 
-    $: {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
+     onMount(() => {
+    // Function to set the overflow based on the menu state
+    function setBodyOverflow() {
+      document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     }
+
+    // Update the overflow style initially
+    setBodyOverflow();
+
+    // Watch `isMenuOpen` for changes
+    const unsubscribe = () => {
+      $: if (isMenuOpen !== undefined) {
+        setBodyOverflow();
+      }
+    };
+
+    // Clean up when the component is destroyed
     onDestroy(() => {
-        document.body.style.overflow = "unset";
+      // Reset body overflow to its default
+      document.body.style.overflow = 'unset';
     });
-  }
+
+    // Return the unsubscribe function to handle reactive cleanup
+    return unsubscribe;
+  });
 </script>
 <nav class="px-4 md:px-16 ">
       <div class="flex items-center justify-between w-full">
