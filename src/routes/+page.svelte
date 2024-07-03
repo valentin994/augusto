@@ -3,7 +3,7 @@
     import CoffeeBag from "$lib/assets/coffeebag.png";
     import Matcha from "$lib/assets/matcha.jpg";
 </script>
-<div class="flex px-8 w-full bg-accent md:bg-transparent md:min-h-[600px]  md:bg-[url('./background.png')] bg-cover bg-center object-fill bg-no-repeat">
+<div class="flex px-8 w-full bg-accent md:bg-transparent md:min-h-[600px]  md:bg-[url('/background.png')] bg-cover bg-center object-fill bg-no-repeat">
     <div class="text-center md:text-left px-4 py-8 md:px-12 md:py-24">
         <h2 class="text-background py-2 md:py-0 font-thin md:text-2xl">Lorem ipsum</h2>
         <h1 class="text-gray-50 text-lg font-bold py-2  md:text-2xl">ZAPOCNITE DAN S KAVOM</h1>
@@ -14,8 +14,8 @@
     </div>
     <div class="min-w-96 h-10 hidden md:block"></div>
 </div>
-<div class="px-8 md:grid md:grid-cols-2 md:px-36 md:-mt-28">
-    <div class="col-span-1 md:px-16">
+<div class="px-8 md:grid md:grid-cols-2 lg:px-36 md:-mt-28">
+    <div class="col-span-1 md:px-16 flex flex-col justify-center">
         <img class="" src={About} alt="People drinking coffee" />
     </div>
     <div class="flex flex-col justify-center md:px-16">
