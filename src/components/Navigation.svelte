@@ -1,27 +1,39 @@
 <script>
     let isMenuOpen = false;
     import { page } from '$app/stores';
+    import { onDestroy } from 'svelte';
 	$: href = $page.url.pathname;
+
+    $: {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    onDestroy(() => {
+        document.body.style.overflow = "unset";
+    });
+  }
 </script>
-<nav class="px-4 bg-accent md:px-16">
+<nav class="px-4 md:px-16 ">
       <div class="flex items-center justify-between w-full">
-        <a href="/" class="px-4 min-w-24 text-xl text-background" on:click={() => isMenuOpen=false}>
+        <a href="/" class="px-4 min-w-24 text-xl text-textcol" on:click={() => isMenuOpen=false}>
             Augusto
         </a>
-        <div class="text-background hidden md:max-[4200px]:block md:text-md">
+        <div class="text-accent hidden md:max-[4200px]:block md:text-md">
           <ul class="flex h-full">
             <li class="px-2 py-6 ">
-              <a href="/" class={`font-bold transition-all duration-300 ease-in hover:text-white ${href.includes("/") ?
-              "text-white" : ""}`}  class:active="{href.includes('/')}">POCETNA</a>
+              <a href="/" class={`font-bold transition-all duration-300 ease-in hover:text-secondary ${href.includes("/") ?
+              "text-primary" : ""}`}  class:active="{href.includes('/')}">POCETNA</a>
             </li>
             <li class="px-2 py-6">
-              <a href="/about" class="font-bold transition-all duration-300 ease-in hover:text-white">O NAMA</a>
+              <a href="/about" class="font-bold transition-all duration-300 ease-in hover:text-secondary">O NAMA</a>
             </li>
             <li class="px-2 py-6 ">
-              <a href="/coffee" class="font-bold transition-all duration-300 ease-in hover:text-white">KAVE</a>
+              <a href="/coffee" class="font-bold transition-all duration-300 ease-in hover:text-secondary">KAVE</a>
             </li>
             <li class="px-2 py-6 ">
-              <a href="/contact" class="font-bold transition-all duration-300 ease-in hover:text-white">KONTAKT</a>
+              <a href="/contact" class="font-bold transition-all duration-300 ease-in hover:text-secondary">KONTAKT</a>
             </li>
           </ul>
         </div>
@@ -29,22 +41,22 @@
         </div>
         <button
           name="Contact call to action"
-          class="md:hidden m-4 flex top-0 right-0 z-20 relative w-10 h-10 text-textcol focus:outline-none"
+          class="md:hidden m-4 flex top-0 right-0 z-50 relative w-10 h-10 text-textcol focus:outline-none"
           on:click={()=> isMenuOpen = !isMenuOpen}
         >
           <div class="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
             <span
-              class={`absolute h-0.5 w-5 bg-background transform transition duration-300 ease-in-out ${
+              class={`absolute h-0.5 w-5 bg-textcol transform transition duration-300 ease-in-out ${
                 isMenuOpen ? "rotate-45 bg-textcol delay-200" : "-translate-y-1.5"
               }`}
             ></span>
             <span
-              class={`absolute h-0.5 bg-background  transform transition-all duration-200 ease-in-out ${
+              class={`absolute h-0.5 bg-textcol  transform transition-all duration-200 ease-in-out ${
                 isMenuOpen ? "w-0 opacity-50" : "w-5 delay-200 opacity-100"
               }`}
             ></span>
             <span
-              class={`absolute h-0.5 w-5 bg-background transform transition duration-300 ease-in-out ${
+              class={`absolute h-0.5 w-5 bg-textcol transform transition duration-300 ease-in-out ${
                 isMenuOpen ? "-rotate-45 bg-textcol delay-200" : "translate-y-1.5"
               }`}
             ></span>
@@ -53,7 +65,7 @@
       </div>
 
     <nav
-        class={`fixed flex top-0 left-0 w-full z-10 h-screen bg-background text-primary bg-opacity-100 transform delay-100 transition-all duration-500 overscroll-auto ${
+        class={`fixed flex top-0 left-0 w-full z-40 h-screen bg-background text-primary bg-opacity-100 transform delay-100 transition-all duration-500 ${
           isMenuOpen
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-full"

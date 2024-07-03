@@ -3,18 +3,30 @@
     import CoffeeBag from "$lib/assets/coffeebag.png";
     import Matcha from "$lib/assets/matcha.jpg";
 </script>
-<div class="flex px-8 w-full bg-accent md:bg-transparent md:min-h-[600px]  md:bg-[url('/background.png')] bg-cover bg-center object-fill bg-no-repeat">
-    <div class="text-center md:text-left px-4 py-8 md:px-12 md:py-24">
+<div class="flex px-8 w-full bg-accent bg-[url('/mlin.jpg')] bg-cover bg-center object-fill bg-no-repeat
+            relative
+            before:content-['']
+            overflow-hidden
+            z-10
+            before:absolute
+            before:inset-0
+            before:block
+            before:bg-gradient-to-r
+            before:from-accent
+            before:to-textcol
+            before:opacity-50
+            before:z-[-5]">
+">
+    <div class="text-center lg:text-left px-4 py-8 md:px-12 md:py-24 max-w-[800px]">
         <h2 class="text-background py-2 md:py-0 font-thin md:text-2xl">Lorem ipsum</h2>
         <h1 class="text-gray-50 text-lg font-bold py-2  md:text-2xl">ZAPOCNITE DAN S KAVOM</h1>
-        <p class="text-background text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
+        <p class="text-white text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
         <div class="py-4">
-            <button class="py-2 px-4 text-background transition-all duration-100 ease-in hover:font-extrabold  hover:bg-textcol border border-background bg-primary text-xl rounded-md font-semibold">Istrazite nase kave</button>
+            <button class="py-3 px-4 text-gray-200 transition-all duration-100 ease-in hover:underline hover:text-white hover:bg-textcol bg-primary text-xl rounded-md font-semibold">Istrazite nase kave</button>
         </div>
     </div>
-    <div class="min-w-96 h-10 hidden md:block"></div>
 </div>
-<div class="px-8 md:grid md:grid-cols-2 lg:px-36 md:-mt-28">
+<div class="px-8 pt-4 md:grid md:grid-cols-2 lg:px-36">
     <div class="col-span-1 md:px-16 flex flex-col justify-center">
         <img class="" src={About} alt="People drinking coffee" />
     </div>
