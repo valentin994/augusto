@@ -19,10 +19,10 @@
 
     <div class="text-center lg:text-left px-4 py-8 md:px-12 md:py-24 max-w-[800px]">
         <h2 class="text-background  md:py-0 font-thin md:text-2xl">Lorem ipsum</h2>
-        <h1 class="text-gray-50 text-lg font-bold py md:py-2 md:text-2xl">ZAPOCNITE DAN S KAVOM</h1>
+        <h1 class="text-gray-50 text-lg font-bold py md:py-2 md:text-2xl">ZAPOČNITE DAN S KAVOM</h1>
         <p class="text-white text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
         <div class="pt-8 pb-2">
-            <button class="py-2 px-4 text-white transition-all duration-100 ease-in hover:text-white hover:bg-textcol bg-primary text-xl rounded-md font-semibold">Istrazite nase kave</button>
+            <button class="py-2 px-4 text-white transition-all duration-100 ease-in hover:text-white hover:bg-textcol bg-primary text-xl rounded-md font-semibold">Istražite nase kave</button>
         </div>
     </div>
 </div>
@@ -50,12 +50,12 @@
             before:opacity-85
             before:z-[-5]">
     <div class="flex md:pr-20">
-        <div class="p-4 md:p-16 text-white text-center md:text-left md:flex md:flex-col md:justify-center">
+        <div class="p-4 px-6 md:p-16 text-white text-center md:text-left md:flex md:flex-col md:justify-center">
             <h1 class="hidden md:block text-3xl font-normal py md:text-textcol tracking-widest">NOVO U PONUDI</h1>
             <p class="py-2 text-xl md:text-accent">MATCHA</p>
             <p class="py-2 text-md md:text-gray-800">Matcha; je fino mljeveni prah posebno uzgojenog i obrađenog lišća zelenog čaja koji potječe iz Kine. Kasnije je zelena boja prikazana u većini modernih matcha razvijena u Japanu, gdje se danas većina matcha proizvodi. Najkasnije u 12. stoljeću kineski komprimirani čaj, sirovina za matchu, uveden je u Japan.</p>
         </div>
-        <div class="">
+        <div class="mt-28">
             <img class="hidden md:block min-w-[400px] max-h-[700px] rounded-md shadow border border-gray-200" src={Matcha} alt="Matcha tea" />
         </div>
     </div>
@@ -115,7 +115,7 @@
     </div>
 </div>
 
-<div class="px-16 py-14 bg-accent text-center md:text-left">
+<div class="px-16 pt-10 pb-8 md:pb-12 bg-accent text-center md:text-left">
     <h1 class="text-3xl font-thin text-background py-2">PRONAĐITE NAS</h1>
     <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="py-4">
