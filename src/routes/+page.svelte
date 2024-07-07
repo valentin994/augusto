@@ -115,7 +115,7 @@
     </div>
 </div>
 
-<div class="px-16 pt-10 pb-8 md:pb-12 bg-accent text-center md:text-left">
+<div class="px-16 pt-10 md:pb-12 bg-accent text-center md:text-left">
     <h1 class="text-3xl font-thin text-background py-2">PRONAĐITE NAS</h1>
     <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="py-4">
