@@ -17,8 +17,8 @@
             before:opacity-80
             before:z-[-5]">
 
-    <div class="px-4 py-8 md:px-12 md:py-24 max-w-[800px]">
-        <h2 class="text-background py md:py-0 font-thin md:text-2xl">Lorem ipsum</h2>
+    <div class="py-8 md:px-12 md:py-24 max-w-[800px]">
+        <h2 class="text-background py md:py-0 font-extrabold md:text-2xl">Lorem ipsum</h2>
         <h1 class="text-gray-50 pb-2 text-xl font-bold py md:py-2 md:text-2xl">ZAPOČNITE DAN S KAVOM</h1>
         <p class="text-white text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
         <div class="pt-8 pb-2 text-center md:text-left">
