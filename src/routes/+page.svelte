@@ -17,29 +17,29 @@
             before:opacity-80
             before:z-[-5]">
 
-    <div class="text-center lg:text-left px-4 py-8 md:px-12 md:py-24 max-w-[800px]">
+    <div class="px-4 py-8 md:px-12 md:py-24 max-w-[800px]">
         <h2 class="text-background py md:py-0 font-thin md:text-2xl">Lorem ipsum</h2>
         <h1 class="text-gray-50 pb-2 text-xl font-bold py md:py-2 md:text-2xl">ZAPOČNITE DAN S KAVOM</h1>
-        <p class="text-white font-semibold text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
-        <div class="pt-8 pb-2">
-            <button class="py-2 px-4 text-white transition-all duration-100 ease-in hover:text-white hover:bg-textcol bg-primary text-xl rounded-md font-semibold">Istražite nase kave</button>
+        <p class="text-white text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
+        <div class="pt-8 pb-2 text-center md:text-left">
+            <button class="py-2 px-8 text-white transition-all duration-100 ease-in hover:text-white hover:bg-textcol bg-primary text-xl rounded-md font-semibold">Istražite nase kave</button>
         </div>
     </div>
 </div>
-<div class="px-8 pt-4 md:grid md:grid-cols-2 lg:px-36">
+<div class="px-8 py-12 md:grid md:grid-cols-2 lg:px-36">
     <div class="col-span-1 md:px-16 flex flex-col justify-center">
         <img class="" src={About} alt="People drinking coffee" />
     </div>
     <div class="flex flex-col justify-center md:px-16">
-        <h1 class="py-2 tracking-widest text-left md:text-left text-textcol text-3xl font-normal">ABOUT US</h1>
+        <h1 class="py-2 pb-4 tracking-widest text-left md:text-left text-textcol text-3xl font-normal">ABOUT US</h1>
         <p class="text-md text-gray-800 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus.</p>
-        <div class="py-8">
-            <button class="py-2 px-4 text-white border border-background bg-primary rounded-md font-semibold text-xl hover:bg-accent transition-all duration-100">Lokacije</button>
+        <div class="py-8 text-center md:text-left">
+            <button class="py-2 px-8 text-white border border-background bg-primary rounded-md font-semibold text-xl hover:bg-accent transition-all duration-100">Lokacije</button>
         </div>
     </div>
 </div>
 
-<h1 class="md:hidden text-center py-4 text-2xl font-normal md:text-textcol tracking-widest bg-gray-100">NOVO U PONUDI</h1>
+<h1 class="md:hidden text-center py-8 border border-gray-200 shadow-md text-2xl font-normal md:text-textcol tracking-widest bg-gray-100">NOVO U PONUDI</h1>
 <div class="bg-[url('/matcha.jpg')] z-10 block md:before:bg-none md:before:opacity-100 relative overflow-hidden bg-cover bg-no-repeat bg-center md:bg-none before:content-['']
             before:absolute
             before:inset-0
@@ -60,11 +60,11 @@
         </div>
     </div>
 </div>
-<h1 class="text-4xl text-accent font-bold text-center md:text-left px-16 pt-8">Naše najpopularnije kave</h1>
+<h1 class="text-3xl text-accent font-semibold text-center md:text-left px-16 pt-12">Naše najpopularnije kave</h1>
 <div class="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3 px-4 py-8 pb-16 md:px-16 place-items-center">
     <div class="w-full bg-white border border-gray-200 rounded-lg shadow">
         <a class="flex justify-center" href="/">
-            <img class="rounded-t-lg max-h-64 md:max-h-72 py-2" src={CoffeeBag} alt="" />
+            <img class="rounded-t-lg max-h-64 md:max-h-72 py-8" src={CoffeeBag} alt="" />
         </a>
         <div class="p-5">
             <a href="/">
@@ -81,7 +81,7 @@
     </div>
     <div class="w-full bg-white border border-gray-200 rounded-lg shadow">
         <a class="flex justify-center" href="/">
-            <img class="rounded-t-lg max-h-64 md:max-h-72 py-2" src={CoffeeBag} alt="" />
+            <img class="rounded-t-lg max-h-64 md:max-h-72 pt-8" src={CoffeeBag} alt="" />
         </a>
         <div class="p-5">
             <a href="/">
@@ -98,7 +98,7 @@
     </div>
     <div class="w-full bg-white border border-gray-200 rounded-lg shadow">
         <a class="flex justify-center" href="/">
-            <img class="rounded-t-lg  max-h-64 md:max-h-72 py-2" src={CoffeeBag} alt="" />
+            <img class="rounded-t-lg  max-h-64 md:max-h-72 pt-8" src={CoffeeBag} alt="" />
         </a>
         <div class="p-5">
             <a href="/">
@@ -131,7 +131,7 @@
             <p class="text-background">Radno vrijeme: Ponedjeljak-Cetvrtak: 08-18</p>
             <p class="text-background">Telefon: 099/1111111</p>
         </div>
-        <div>
+        <div class="py-4">
             <h2 class="text-xl text-white font-semibold">Drustvene mreze</h2>
             <div class="flex flex-row justify-center md:justify-normal">
                 <div class="max-w-8 w-full py-2 px">
