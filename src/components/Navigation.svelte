@@ -15,16 +15,16 @@
         const contact = document.querySelector("#contact");
 
         inView(home, (target) => {
-            animate(home, {opacity: [null, 0.5, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.5})
+            animate(home, {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.5})
         })
         inView(aboutus  , (target) => {
-            animate(aboutus , {opacity: [null, 0.5, 1]}, {duration: 1, easing: "ease-in-out", delay:0.2})
+            animate(aboutus , {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay:0.2})
         })
         inView(kave, (target) => {
-            animate(kave, {opacity: [null, 0.5, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.3})
+            animate(kave, {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.3})
         })
         inView(contact, (target) => {
-            animate(contact, {opacity: [null, 0.5, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.4})
+            animate(contact, {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.4})
         })
     })
 
@@ -37,17 +37,17 @@
         <div class="text-secondary hidden md:max-[4200px]:block md:text-md z-20">
           <ul class="flex h-full">
             <li class="px-2 py-6 ">
-              <a href="/" class={`opacity-0 font-bold transition-all duration-300 ease-in hover:text-gray-200 ${href.includes("/") ?
+              <a href="/" class={`font-bold transition-all duration-300 ease-in hover:text-gray-200 ${href.includes("/") ?
               "text-white" : ""}`}  class:active="{href.includes('/')}">POČETNA</a>
             </li>
             <li class="px-2 py-6">
-              <a href="/about" class="opacity-0 font-bold transition-all duration-300 ease-in hover:text-gray-200">O NAMA</a>
+              <a href="/about" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">O NAMA</a>
             </li>
             <li class="px-2 py-6 ">
-              <a href="/coffee" class="opacity-0 font-bold transition-all duration-300 ease-in hover:text-gray-200">KAVE</a>
+              <a href="/coffee" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">KAVE</a>
             </li>
             <li class="px-2 py-6 ">
-              <a href="/contact" class="opacity-0 font-bold transition-all duration-300 ease-in hover:text-gray-200">KONTAKT</a>
+              <a href="/contact" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">KONTAKT</a>
             </li>
           </ul>
         </div>
