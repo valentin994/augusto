@@ -7,7 +7,8 @@
     import { inView, animate, spring } from "motion";
     onMount(() => {
         const headings = document.querySelector("#heading");
-        const heading2 = document.querySelector("#about");
+        const aboutimg = document.querySelector("#aboutimg");
+        const abouttxt = document.querySelector("#abouttxt");
         const heading3 = document.querySelector("#novo");
         const matcha = document.querySelector("#matcha");
         const matchaimg = document.querySelector("#matchaimg")
@@ -23,8 +24,13 @@
             animate(headings, {opacity: [null, 0.5, 1], y: [50, 0]}, {duration: 1, easing: "ease-in-out"})
         })
 
-        inView(heading2, (target) => {
-            animate(heading2, {opacity: [null, 0.8, 1], y: [50, 0]}, {duration: 1, easing: "ease-in-out"})
+        inView(aboutimg, (target) => {
+            animate(aboutimg, {opacity: [0, 1], x: [200, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+
+        inView(abouttxt, (target) => {
+            animate(abouttxt, {opacity: [0, 1], x: [-200, 0]}, {duration: 1.5, easing: "ease-in-out", delay: 0.3})
         })
 
         inView(heading3, (target) => {
@@ -92,11 +98,11 @@
         </div>
     </div>
 </div>
-<div id="about" class="opacity-0 px-8 py-12 md:grid md:grid-cols-2 lg:px-36">
-    <div class="col-span-1 md:px-16 flex flex-col justify-center">
+<div class="px-8 py-12 md:grid md:grid-cols-2 lg:px-36">
+    <div id="aboutimg" class="col-span-1 md:px-16 flex flex-col justify-center">
         <img class="" src={About} alt="People drinking coffee" />
     </div>
-    <div class="flex flex-col justify-center md:px-16">
+    <div id="abouttxt" class="flex flex-col justify-center md:px-16">
         <h1 class="py-2 pb-4 tracking-widest text-left md:text-left text-textcol text-3xl font-normal">ABOUT US</h1>
         <p class="text-md text-gray-800 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus.</p>
         <div class="py-8 text-center md:text-left">
