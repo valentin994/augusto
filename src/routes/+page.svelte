@@ -4,7 +4,7 @@
     import Matcha from "$lib/assets/matcha.jpg";
     import { onMount } from "svelte";
 
-    import { inView, animate, spring } from "motion";
+    import { inView, animate } from "motion";
     onMount(() => {
         const headings = document.querySelector("#heading");
         const aboutimg = document.querySelector("#aboutimg");
@@ -75,7 +75,7 @@
     })
 
 </script>
-<div class="flex pt-20 px-8 w-full bg-accent bg-[url('/mlin.jpg')] bg-cover bg-center object-fill bg-no-repeat -mt-20
+<div class="flex pt-20 px-8 w-full bg-accent bg-[url('/mlin.avif')] bg-cover bg-center object-fill bg-no-repeat -mt-20
             relative
             before:content-['']
             overflow-hidden
