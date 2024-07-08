@@ -41,13 +41,13 @@
               "text-white" : ""}`}  class:active="{href.includes('/')}">POČETNA</a>
             </li>
             <li class="px-2 py-6">
-              <a href="/about" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">O NAMA</a>
+              <a href="/" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">O NAMA</a>
             </li>
             <li class="px-2 py-6 ">
-              <a href="/coffee" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">KAVE</a>
+              <a href="/" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">KAVE</a>
             </li>
             <li class="px-2 py-6 ">
-              <a href="/contact" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">KONTAKT</a>
+              <a href="/" class="font-bold transition-all duration-300 ease-in hover:text-gray-200">KONTAKT</a>
             </li>
           </ul>
         </div>
