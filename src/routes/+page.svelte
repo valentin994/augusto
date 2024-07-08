@@ -9,9 +9,10 @@
         const headings = document.querySelector("#heading");
         const heading2 = document.querySelector("#about");
         const heading3 = document.querySelector("#novo")
-
+        
         inView(headings, (target) => {
-            console.log("i am here")
+            console.log("i am here");
+            margin: "0px 100px 0px 0px";
             animate(headings, {opacity: [null, 0.5, 1]}, {duration: 2})
         })
 
@@ -22,7 +23,7 @@
 
         inView(heading3, (target) => {
             console.log("novo sekcija")
-            animate(heading3, {y: [100, 0]}, {ease: "ease-in"})
+            animate(heading3, {y: [100, 0]}, {duration: 1, easing: "ease-in-out"})
         })
     })
   
