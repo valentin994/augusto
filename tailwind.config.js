@@ -4,7 +4,7 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
-            fontFamilt: {
+            fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
             colors: {
