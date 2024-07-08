@@ -4,29 +4,70 @@
     import Matcha from "$lib/assets/matcha.jpg";
     import { onMount } from "svelte";
 
-    import { inView, animate } from "motion";
+    import { inView, animate, spring } from "motion";
     onMount(() => {
         const headings = document.querySelector("#heading");
         const heading2 = document.querySelector("#about");
-        const heading3 = document.querySelector("#novo")
+        const heading3 = document.querySelector("#novo");
+        const matcha = document.querySelector("#matcha");
+        const matchaimg = document.querySelector("#matchaimg")
+
+        const najpopularnije = document.querySelector("#najpopularnije");
+        const columbia = document.querySelector("#columbia")
+        const brazil = document.querySelector("#brazil")
+        const ethiopia = document.querySelector("#ethiopia")
+
+        const footer = document.querySelector("#footer");
         
         inView(headings, (target) => {
-            console.log("i am here");
-            margin: "0px 100px 0px 0px";
-            animate(headings, {opacity: [null, 0.5, 1]}, {duration: 2})
+            animate(headings, {opacity: [null, 0.5, 1], y: [50, 0]}, {duration: 1, easing: "ease-in-out"})
         })
 
         inView(heading2, (target) => {
-            console.log("i am in about section")
-            animate(heading2, {opacity: [null, 0.8, 1]}, {duration: 2})
+            animate(heading2, {opacity: [null, 0.8, 1], y: [50, 0]}, {duration: 1, easing: "ease-in-out"})
         })
 
         inView(heading3, (target) => {
-            console.log("novo sekcija")
             animate(heading3, {y: [100, 0]}, {duration: 1, easing: "ease-in-out"})
         })
+
+        inView(matcha, (target) => {
+            animate(matcha, {opacity: [0, 100] ,x: [-1000, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(matchaimg, (target) => {
+            animate(matchaimg, {opacity: [0, 100] ,x: [300, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(najpopularnije, (target) => {
+            animate(najpopularnije, {opacity: [0, 100] ,y: [100, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(najpopularnije, (target) => {
+            animate(matchaimg, {opacity: [0, 100] ,y: [100, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(columbia, (target) => {
+            animate(columbia, {opacity: [0, 100], y: [200, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(brazil, (target) => {
+            animate(brazil, {opacity: [0, 100], y: [-200, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(brazil, (target) => {
+            animate(brazil, {opacity: [0, 100], y: [-300, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
+
+        inView(ethiopia, (target) => {
+            animate(ethiopia, {opacity: [0, 100], y: [300, 0]}, { duration: 1, easing: "ease-in-out"})
+        })
+        
+        inView(footer, (target) => {
+            animate(footer, {opacity: [0, 100], y: [200, 0]}, {duration: 1, easing: "ease-in-out"})
+        })
     })
-  
+
 </script>
 <div class="flex pt-20 px-8 w-full bg-accent bg-[url('/mlin.jpg')] bg-cover bg-center object-fill bg-no-repeat -mt-20
             relative
@@ -75,19 +116,19 @@
             before:opacity-85
             before:z-[-5]">
     <div class="flex md:pr-20">
-        <div class="p-4 px-6 md:p-16 text-white text-center md:text-left md:flex md:flex-col md:justify-center">
+        <div id="matcha" class="p-4 px-6 md:p-16 text-white text-center md:text-left md:flex md:flex-col md:justify-center">
             <h1 class="hidden md:block text-3xl font-normal py md:text-textcol tracking-widest">NOVO U PONUDI</h1>
             <p class="pt-10 md:py-2 text-2xl font-extrabold md:text-primary">MATCHA</p>
             <p class="pb-10 py-2 text-xl md:text-gray-800">Matcha; je fino mljeveni prah posebno uzgojenog i obrađenog lišća zelenog čaja koji potječe iz Kine. Kasnije je zelena boja prikazana u većini modernih matcha razvijena u Japanu, gdje se danas većina matcha proizvodi. Najkasnije u 12. stoljeću kineski komprimirani čaj, sirovina za matchu, uveden je u Japan.</p>
         </div>
-        <div class="mt-28">
+        <div id="matchaimg" class="mt-28">
             <img class="hidden md:block min-w-[400px] max-h-[700px] rounded-md shadow border border-gray-200" src={Matcha} alt="Matcha tea" />
         </div>
     </div>
 </div>
 <h1 class="text-3xl text-accent font-semibold text-center md:text-left px-16 pt-12">Naše najpopularnije kave</h1>
-<div class="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3 px-4 py-8 pb-16 md:px-16 place-items-center">
-    <div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+<div id="kave" class="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3 px-4 py-8 pb-16 md:px-16 place-items-center">
+    <div id="columbia" class="w-full bg-white border border-gray-200 rounded-lg shadow">
         <a class="flex justify-center" href="/">
             <img class="rounded-t-lg max-h-64 md:max-h-72 py-8" src={CoffeeBag} alt="" />
         </a>
@@ -104,7 +145,7 @@
             </a>
         </div>
     </div>
-    <div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+    <div id="brazil" class="w-full bg-white border border-gray-200 rounded-lg shadow">
         <a class="flex justify-center" href="/">
             <img class="rounded-t-lg max-h-64 md:max-h-72 pt-8" src={CoffeeBag} alt="" />
         </a>
@@ -121,7 +162,7 @@
             </a>
         </div>
     </div>
-    <div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+    <div id="ethiopia" class="w-full bg-white border border-gray-200 rounded-lg shadow">
         <a class="flex justify-center" href="/">
             <img class="rounded-t-lg  max-h-64 md:max-h-72 pt-8" src={CoffeeBag} alt="" />
         </a>
@@ -140,7 +181,7 @@
     </div>
 </div>
 
-<div class="px-16 pt-10 md:pb-12 bg-accent text-center md:text-left">
+<div id="footer" class="px-16 pt-10 md:pb-12 bg-accent text-center md:text-left">
     <h1 class="text-3xl font-thin text-background py-2">PRONAĐITE NAS</h1>
     <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="py-4">
