@@ -1,7 +1,31 @@
-<script>
+<script lang="ts">
     import About from "$lib/assets/about.png";
     import CoffeeBag from "$lib/assets/coffeebag.png";
     import Matcha from "$lib/assets/matcha.jpg";
+    import { onMount } from "svelte";
+
+    import { inView, animate } from "motion";
+    onMount(() => {
+        const headings = document.querySelector("#heading");
+        const heading2 = document.querySelector("#about");
+        const heading3 = document.querySelector("#novo")
+
+        inView(headings, (target) => {
+            console.log("i am here")
+            animate(headings, {opacity: [null, 0.5, 1]}, {duration: 2})
+        })
+
+        inView(heading2, (target) => {
+            console.log("i am in about section")
+            animate(heading2, {opacity: [null, 0.8, 1]}, {duration: 2})
+        })
+
+        inView(heading3, (target) => {
+            console.log("novo sekcija")
+            animate(heading3, {y: [100, 0]}, {ease: "ease-in"})
+        })
+    })
+  
 </script>
 <div class="flex pt-20 px-8 w-full bg-accent bg-[url('/mlin.jpg')] bg-cover bg-center object-fill bg-no-repeat -mt-20
             relative
@@ -17,7 +41,7 @@
             before:opacity-80
             before:z-[-5]">
 
-    <div class="py-8 md:px-12 md:py-24 max-w-[800px]">
+    <div id="heading" class="opacity-0 py-8 md:px-12 md:py-24 max-w-[800px]">
         <h2 class="text-background py md:py-0 font-extrabold md:text-2xl">Lorem ipsum</h2>
         <h1 class="text-gray-50 pb-2 text-xl font-bold py md:py-2 md:text-2xl">ZAPOČNITE DAN S KAVOM</h1>
         <p class="text-white text-md md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi quam, finibus quis tortor pulvinar, malesuada feugiat eros. Integer malesuada diam ut libero fermentum, id tristique nunc luctus. Vestibulum nisi lectus, aliquam dapibus sem eu, laoreet laoreet turpis. Cras scelerisque vestibulum auctor. Maecenas interdum purus dui, non dignissim neque varius eu. Phasellus viverra sed enim non dignissim. Cras lobortis ullamcorper metus vel posuere. Etiam vel nulla ac purus venenatis finibus. </p>
@@ -26,7 +50,7 @@
         </div>
     </div>
 </div>
-<div class="px-8 py-12 md:grid md:grid-cols-2 lg:px-36">
+<div id="about" class="opacity-0 px-8 py-12 md:grid md:grid-cols-2 lg:px-36">
     <div class="col-span-1 md:px-16 flex flex-col justify-center">
         <img class="" src={About} alt="People drinking coffee" />
     </div>
@@ -39,7 +63,7 @@
     </div>
 </div>
 
-<h1 class="md:hidden text-center py-8 border border-gray-200 shadow-md text-2xl font-normal md:text-textcol tracking-widest bg-gray-100">NOVO U PONUDI</h1>
+<h1 id="novo" class="md:hidden text-center py-8 border border-gray-200 shadow-md text-2xl font-normal md:text-textcol tracking-widest bg-gray-100">NOVO U PONUDI</h1>
 <div class="bg-[url('/matcha.jpg')] z-10 block md:before:bg-none md:before:opacity-100 relative overflow-hidden bg-cover bg-no-repeat bg-center md:bg-none before:content-['']
             before:absolute
             before:inset-0
