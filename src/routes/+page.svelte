@@ -25,12 +25,12 @@
         })
 
         inView(aboutimg, (target) => {
-            animate(aboutimg, {opacity: [0, 1], x: [200, 0]}, {duration: 1, easing: "ease-in-out"})
+            animate(aboutimg, {opacity: [0, 1], x: [-200, 0]}, {duration: 1, easing: "ease-in-out"})
         })
 
 
         inView(abouttxt, (target) => {
-            animate(abouttxt, {opacity: [0, 1], x: [-200, 0]}, {duration: 1.5, easing: "ease-in-out", delay: 0.3})
+            animate(abouttxt, {opacity: [0, 1], x: [200, 0]}, {duration: 1, easing: "ease-in-out", delay: 0.5})
         })
 
         inView(heading3, (target) => {
@@ -38,7 +38,7 @@
         })
 
         inView(matcha, (target) => {
-            animate(matcha, {opacity: [0, 100] ,x: [-1000, 0]}, {duration: 1, easing: "ease-in-out"})
+            animate(matcha, {opacity: [0, 100] ,x: [-200, 0]}, {duration: 1, easing: "ease-in-out"})
         })
 
         inView(matchaimg, (target) => {

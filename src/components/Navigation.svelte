@@ -2,10 +2,31 @@
     let isMenuOpen = false;
     import { page } from '$app/stores';
     import { browser } from '$app/environment';
+    import { inView, animate } from "motion";
+    import { onMount } from "svelte";
 
     $: if (browser) document.body.classList.toggle("noscroll", isMenuOpen);
 	$: href = $page.url.pathname;
     
+    onMount(() => {
+        const home = document.querySelector("#home");
+        const aboutus = document.querySelector("#aboutus");
+        const kave = document.querySelector("#kave");
+        const contact = document.querySelector("#contact");
+
+        inView(home, (target) => {
+            animate(home, {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.5})
+        })
+        inView(aboutus  , (target) => {
+            animate(aboutus , {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay:0.2})
+        })
+        inView(kave, (target) => {
+            animate(kave, {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.3})
+        })
+        inView(contact, (target) => {
+            animate(contact, {opacity: [0, 1]}, {duration: 1, easing: "ease-in-out", delay: 0.4})
+        })
+    })
 
 </script>
 <nav class="px-4 md:px-16 ">
@@ -66,31 +87,31 @@
       >
         <ul class="flex flex-col items-center w-full justify-center align-middle text-center text-textcol">
           <li class="text-2xl p-4">
-            <a on:click={() => isMenuOpen = false}
+            <a id="home" on:click={() => isMenuOpen = false}
               href="/"
             >
               Pocetna
             </a>
           </li>
           <li class="text-2xl p-4">
-            <a on:click={() => isMenuOpen = false}
-              href="/about"
+            <a id="aboutus" on:click={() => isMenuOpen = false}
+              href="/"
               class="nav-link"
             >
               O nama
             </a>
           </li>
           <li class="text-2xl p-4">
-            <a on:click={() => isMenuOpen = false}
-              href="/gallery"
+            <a id="kave" on:click={() => isMenuOpen = false}
+              href="/"
               class="nav-link"
             >
               Kave
             </a>
           </li>
           <li class="text-2xl p-4">
-            <a on:click={() => isMenuOpen = false}
-              href="/contact"
+            <a id="contact" on:click={() => isMenuOpen = false}
+              href="/"
               class="nav-link"
             >
               Kontakt
